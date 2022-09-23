@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ColorCard from "./components/colorcard/ColorCard";
+import Form from "./components/form/Form";
 
 function App() {
   const db = [
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <Form />
       <ul className="color-card-list">
         {db.map((card) => {
           return <ColorCard hexCode={card.colorCode} />;

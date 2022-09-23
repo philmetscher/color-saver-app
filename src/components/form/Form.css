@@ -1,0 +1,22 @@
+.form-card {
+  flex-flow: column;
+  gap: 10px;
+}
+
+.card .card-code__input {
+  height: 50px;
+  padding: 0;
+}
+.card .card-code__input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.card .card-code__input::-webkit-color-swatch {
+  border: none;
+}
+
+.form-card button {
+  background: #efefee;
+  border: none;
+  font-weight: 700;
+  padding: 8px 12px;
+}

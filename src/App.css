@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
+  gap: 50px;
 }
 
 .color-card-list {
@@ -10,4 +12,21 @@
   flex-flow: row wrap;
   justify-content: center;
   list-style-type: none;
+}
+
+.card {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border: 5px solid #000;
+}
+
+.card .card-code {
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  width: 200px;
+  outline: 2px solid #000;
 }

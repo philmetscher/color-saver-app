@@ -3,12 +3,12 @@ import "./ColorCard.css";
 export default function ColorCard({ hexCode }) {
   return (
     <li
-      className="color-card"
+      className="card color-card"
       style={{
         backgroundColor: hexCode,
       }}
     >
-      <input className="card-code" value={hexCode} />
+      <input className="card-code card-code__hex" value={hexCode} />
     </li>
   );
 }
