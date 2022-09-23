@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-card-list {
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+}
