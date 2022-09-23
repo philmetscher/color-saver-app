@@ -14,7 +14,12 @@ body #root,
 .App {
   width: 100%;
   min-height: 100vh;
+}
+
+body {
   color: #000;
+  font-size: 1rem;
+  min-width: 320px;
 }
 
 code {

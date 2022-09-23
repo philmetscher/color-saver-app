@@ -18,6 +18,7 @@ export default function ColorCard({ card }) {
         value={card.hexCode}
         onChange={() => {}}
       />
+      <button className="card-delete">X</button>
     </li>
   );
 }
