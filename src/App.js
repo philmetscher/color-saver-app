@@ -1,44 +1,18 @@
+import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import ColorCard from "./components/colorcard/ColorCard";
+import { initialCards } from "./db";
+import ColorCards from "./components/colorcards/ColorCards";
 import Form from "./components/form/Form";
 
 function App() {
-  const db = [
-    {
-      id: "0",
-      colorCode: "#ccc",
-    },
-    {
-      id: "1",
-      colorCode: "#4c6ef5",
-    },
-    {
-      id: "2",
-      colorCode: "#82c91e",
-    },
-    {
-      id: "3",
-      colorCode: "#12b886",
-    },
-    {
-      id: "4",
-      colorCode: "#82c91e",
-    },
-    {
-      id: "5",
-      colorCode: "#ccc",
-    },
-  ];
+  const [cards, setCards] = useState(initialCards);
 
+  console.log(cards);
   return (
     <div className="App">
-      <Form />
-      <ul className="color-card-list">
-        {db.map((card) => {
-          return <ColorCard hexCode={card.colorCode} />;
-        })}
-      </ul>
+      <Form cards={cards} setCards={setCards} />
+      <ColorCards cards={cards} />
     </div>
   );
 }

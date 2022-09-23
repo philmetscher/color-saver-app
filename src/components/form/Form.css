@@ -19,4 +19,9 @@
   border: none;
   font-weight: 700;
   padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #efefee;
+}
+.form-card button:focus {
+  border-color: #000;
 }
