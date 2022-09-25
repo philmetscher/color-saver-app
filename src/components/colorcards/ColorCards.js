@@ -19,7 +19,7 @@ export default function ColorCards({ cards, setCards }) {
   };
 
   return (
-    <ul className="color-card-list">
+    <>
       {cards.map((card) => {
         return (
           <ColorCard
@@ -34,6 +34,6 @@ export default function ColorCards({ cards, setCards }) {
           />
         );
       })}
-    </ul>
+    </>
   );
 }

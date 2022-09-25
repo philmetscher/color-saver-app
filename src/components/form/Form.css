@@ -1,11 +1,11 @@
-.card .card-code__input {
+.form-card .card-code__input {
   height: 50px;
   padding: 0;
 }
-.card .card-code__input::-webkit-color-swatch-wrapper {
+.form-card .card-code__input::-webkit-color-swatch-wrapper {
   padding: 0;
 }
-.card .card-code__input::-webkit-color-swatch {
+.form-card .card-code__input::-webkit-color-swatch {
   border: none;
 }
 

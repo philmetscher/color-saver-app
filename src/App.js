@@ -17,8 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <Form cards={cards} setCards={setCards} />
-      <ColorCards cards={cards} setCards={setCards} />
+      <ul className="color-card-list">
+        <Form cards={cards} setCards={setCards} />
+        <ColorCards cards={cards} setCards={setCards} />
+      </ul>
     </div>
   );
 }

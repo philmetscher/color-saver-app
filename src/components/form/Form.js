@@ -25,29 +25,30 @@ export default function Form({ cards, setCards, setColorNames }) {
   };
 
   return (
-    <form
-      className="card form-card"
-      onSubmit={(event) => {
-        addCard(event);
-      }}
-    >
-      <input
-        className="card-code card-code__input"
-        type="color"
-        value={hexColor}
-        onChange={(event) => {
-          syncInput(event);
+    <li className="card form-card">
+      <form
+        onSubmit={(event) => {
+          addCard(event);
         }}
-      />
-      <input
-        className="card-code card-code__hex"
-        value={hexColor}
-        placeholder="#000000"
-        onChange={(event) => {
-          syncInput(event);
-        }}
-      />
-      <button type="submit">ADD</button>
-    </form>
+      >
+        <input
+          className="card-code card-code__input"
+          type="color"
+          value={hexColor}
+          onChange={(event) => {
+            syncInput(event);
+          }}
+        />
+        <input
+          className="card-code card-code__hex"
+          value={hexColor}
+          placeholder="#000000"
+          onChange={(event) => {
+            syncInput(event);
+          }}
+        />
+        <button type="submit">ADD</button>
+      </form>
+    </li>
   );
 }
