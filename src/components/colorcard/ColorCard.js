@@ -1,6 +1,6 @@
 import "./ColorCard.css";
 
-export default function ColorCard({ card, onClickDelete }) {
+export default function ColorCard({ card, onClickDelete, onInputChange }) {
   const handleCardClick = () => {
     navigator.clipboard.writeText(card.hexCode);
   };
@@ -16,7 +16,10 @@ export default function ColorCard({ card, onClickDelete }) {
       <input
         className="card-code card-code__hex"
         value={card.hexCode}
-        onChange={() => {}}
+        onChange={(event) => {
+          event.stopPropagation();
+          onInputChange(event);
+        }}
       />
       <button
         className="card-delete"
