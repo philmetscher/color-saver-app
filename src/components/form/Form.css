@@ -1,8 +1,3 @@
-.form-card {
-  flex-flow: column;
-  gap: 10px;
-}
-
 .card .card-code__input {
   height: 50px;
   padding: 0;

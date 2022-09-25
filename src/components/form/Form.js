@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Form.css";
 
-export default function Form({ cards, setCards }) {
+export default function Form({ cards, setCards, setColorNames }) {
   const [hexColor, setHexColor] = useState("");
 
   const addCard = (event) => {

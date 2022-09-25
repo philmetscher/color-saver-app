@@ -1,3 +1,8 @@
+.card-code__name {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .card-delete {
   position: absolute;
   top: -19px;
