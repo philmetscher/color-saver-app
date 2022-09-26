@@ -17,6 +17,9 @@
   cursor: pointer;
   border: 1px solid #efefee;
 }
+.form-card button:hover {
+  background: #d3d3d3;
+}
 .form-card button:focus {
   border-color: #000;
 }

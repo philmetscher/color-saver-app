@@ -35,3 +35,6 @@
   width: 200px;
   outline: 2px solid #000;
 }
+.card .card-code__hex:focus {
+  background: #d3d3d3;
+}
