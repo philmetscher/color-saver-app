@@ -1,7 +1,6 @@
 .App {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: column;
   gap: 50px;
   padding: 35px;
