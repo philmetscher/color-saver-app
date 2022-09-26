@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ColorCard.css";
 
-export default function ColorCard({ card, onClickDelete, onInputChange }) {
+export default function ColorCard({ key, card, onClickDelete, onInputChange }) {
   const [hexCodeName, setHexCodeName] = useState("");
 
   const handleCardClick = () => {
@@ -27,6 +27,7 @@ export default function ColorCard({ card, onClickDelete, onInputChange }) {
 
   return (
     <li
+      key={key}
       className="card color-card"
       style={{
         backgroundColor: card.hexCode,

@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { initialCards } from "./db";
-import ColorCards from "./components/colorcards/ColorCards";
-import Form from "./components/form/Form";
+import { initialPalette } from "./db";
+import ColorPalette from "./components/colorpalette/ColorPalette";
 
 function App() {
-  const [cards, setCards] = useState(
-    () => JSON.parse(localStorage.getItem("colorCards")) ?? initialCards
+  const [palettes, setPalettes] = useState(
+    () => JSON.parse(localStorage.getItem("colorPalettes")) ?? initialPalette
   );
 
+  //palettes changed ? add new "colorPalettes" to localstorage
   useEffect(() => {
-    localStorage.removeItem("colorCards"); //remove current saved cards;
-    localStorage.setItem("colorCards", JSON.stringify(cards));
-  }, [cards]);
+    localStorage.removeItem("colorPalettes"); //remove current saved cards;
+    localStorage.setItem("colorPalettes", JSON.stringify(palettes));
+  }, [palettes]);
 
   return (
     <div className="App">
-      <ul className="color-card-list">
-        <Form cards={cards} setCards={setCards} />
-        <ColorCards cards={cards} setCards={setCards} />
-      </ul>
+      {Object.keys(palettes).map((palette, index) => {
+        return (
+          <ColorPalette
+            key={palette + index}
+            paletteName={palette}
+            currentPalette={palettes[palette]}
+            palettes={palettes}
+            setPalettes={setPalettes}
+          />
+        );
+      })}
     </div>
   );
 }
